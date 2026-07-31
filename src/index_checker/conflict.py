@@ -54,6 +54,8 @@ def find_conflicts(samples: list[dict], max_distance: int = 2) -> list[dict]:
             conflict_type = "duplicate"
         elif 1 <= distance <= max_distance:
             conflict_type = "near_conflict"
+        elif 2 <= distance <= max_distance:
+            conflict_type = "near_conflict"
         else:
             continue
 
